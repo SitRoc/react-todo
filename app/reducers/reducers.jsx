@@ -7,7 +7,7 @@ export var searchTextReducer = (state = '', action) => {
       return action.searchText;
     default:
       return state;
-  }
+  };
 };
 
 export var showCompletedReducer = (state = false, action) => {
@@ -22,7 +22,7 @@ export var showCompletedReducer = (state = false, action) => {
 export var todosReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return[
+      return [
         ...state,
         {
           id: uuid(),
@@ -32,11 +32,11 @@ export var todosReducer = (state = [], action) => {
           completedAt: undefined
         }
       ];
-    // Add Case for TOGGLE_TODO
     case 'TOGGLE_TODO':
       return state.map((todo) => {
         if (todo.id === action.id) {
           var nextCompleted = !todo.completed;
+
           return {
             ...todo,
             completed: nextCompleted,

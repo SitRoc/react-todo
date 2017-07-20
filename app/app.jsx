@@ -16,13 +16,11 @@ store.dispatch(actions.addTodo('Clean the yard'));
 store.dispatch(actions.setSearchText('yard'));
 store.dispatch(actions.toggleShowCompleted());
 
-// Load foundations
-//require('style!css!foundation-sites/dist/foundation.min.css');
-
+// Load foundation
 $(document).foundation();
 
 // App css
-require('style!css!sass!applicationStyles');
+require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
   <Provider store={store}>
