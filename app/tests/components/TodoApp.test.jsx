@@ -11,7 +11,7 @@ var TodoApp = require('TodoApp');
 
 describe('TodoApp', () => {
 
-  it('should exist', () => {
+  it('should exist ', () => {
     expect(TodoApp).toExist();
   });
 
