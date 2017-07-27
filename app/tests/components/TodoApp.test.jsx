@@ -1,21 +1,20 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Provider} = require('react-redux');
-var expect = require('expect');
-var $ = require('jQuery');
 var TestUtils = require('react-addons-test-utils');
+var expect = require('expect');
+var $ = require('jquery');
 
 var configureStore = require('configureStore');
-var TodoList = require('TodoList');
 var TodoApp = require('TodoApp');
+import TodoList from 'TodoList';
 
 describe('TodoApp', () => {
-
-  it('should exist ', () => {
+  it('should exist', () => {
     expect(TodoApp).toExist();
   });
 
-  it('should render todolist', () => {
+  it('should render TodoList', () => {
     var store = configureStore.configure();
     var provider = TestUtils.renderIntoDocument(
       <Provider store={store}>
@@ -28,5 +27,4 @@ describe('TodoApp', () => {
 
     expect(todoList.length).toEqual(1);
   });
-
 });
